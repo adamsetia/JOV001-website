@@ -1,0 +1,93 @@
+/* grids */
+.container {
+	width: 100%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	.transitions();
+}
+.grid_full,
+.grid_half,
+.grid_quarter,
+.grid_thirds {
+	position: relative;
+	margin-left: 15px;
+	margin-right: 15px;
+	.transitions();
+	
+	.alpha {
+		margin: 0;
+	}
+	.omega {
+		margin: 0;
+	}
+}
+
+.setGrid(@w) when (@w = @breakpoint1) {
+	div.grid_centered, .grid_centered {
+		float: none;
+		margin: 0 auto;
+		clear: both;
+	}
+	.container {
+		width: 654px;
+	}
+	.grid_full,
+	.grid_half,
+	.grid_quarter,
+	.grid_thirds {
+		float: left;
+		margin-left: 15px;
+		margin-right: 15px;
+		.alpha, &.alpha {
+			margin-left: 0;
+			margin-right: 15px;
+		}
+		.omega, &.omega {
+			margin-left: 15px;
+			margin-right: 0;
+		}
+	}
+	.grid_full, .grid_full.small{
+		width: 624px;
+		
+	}
+	.grid_half, .small .grid_half {
+		width: 297px;
+	}
+	.grid_quarter, .small .grid_quarter {
+		width: 133px;
+		&.three {
+			width: 459px;
+		}
+	}
+	.grid_thirds, .small .grid_thirds {
+		width: 188px;
+		&.two {
+			width: 406px;
+		}
+	}
+}	
+.setGrid(@w) when (@w = @breakpoint2) {
+	.container {
+		width: 796px;
+	}
+	.grid_full {
+		width: 766px;
+	}
+	.grid_half {
+		width: 368px;
+	}
+	.grid_quarter {
+		width: 169px;
+		&.three {
+			width: 567px;
+		}
+	}
+	.grid_thirds {
+		width: 235px;
+		&.two {
+			width: 500px;
+		}
+	}
+}	
