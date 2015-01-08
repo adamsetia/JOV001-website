@@ -1,0 +1,35 @@
+/*footer*/
+footer {
+	position: relative;
+	.footer-nav, .social-share {
+		.listUnstyled();
+		ul {
+			li {
+				.li-plain();
+				.inline-block();
+			}
+		}
+	}
+	.footer-btm {
+		.positions(absolute, 0, auto, auto, 0);
+		width: 100%;
+		.box-sizing();
+		padding-top: 10px;
+		text-align: center;
+		background-color: @color;
+		color: #fff;
+		.proximaReg();
+		height: 52px;
+		font-size: 20px;
+		p {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.setFooter(@w) when (@w = @breakpoint1) {
+	
+}	
+.setFooter(@w) when (@w = @breakpoint2) {
+		
+}	

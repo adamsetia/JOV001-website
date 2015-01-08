@@ -1,47 +1,72 @@
 @breakpoint1 : 768px;
 @breakpoint2 : 1024px;
-@font-size : 12px;
+@breakpoint3 : 1200px;
+@font-size : 18px;
 @line-height : 1.667em;
-@color : #666;
-@color-red : #d72027;
-@color-red-hvr : lighten(@color-red, 20%);
-@color-purple : #ba1d83;
+@color-option : #4e4d4d;
+@color: #6c6a6a;
 @color-black: #000;
 @color-white: #fff;
 @color-white-hvr : darken(@color-white, 20%);
-@hover-color : lighten(@color, 20%);
+@hover-color : lighten(@color-option, 20%);
+/*site colors*/
+@col-purple: #c04192;
+@col-purple-hvr: darken(@col-purple, 10%);
+@col-pink: #ff7285;
+@col-pink-hvr: darken(@col-pink, 10%);
+@col-yellow: #f9c533;
+@col-yellow-hvr: darken(@col-yellow, 10%);
+@col-green: #b6dba5;
+@col-green-hvr: darken(@col-green, 10%);
+@col-blue: #9ecddd;
+@col-blue-hvr: darken(@col-blue, 10%);
+@col-beige: #e1d1ad;
+@col-beige-hvr: darken(@col-beige, 10%);
+@col-orange: #fe6a42;
+@col-orange-hvr: darken(@col-orange, 10%);
+/*
+font-family:'Proxima N W01 Bold';
+font-family:'Proxima N W01 Smbd';
+font-family:'Proxima N W01 Light';
+font-family:'Proxima Nova W08 Reg';
+*/
+.proximaBold() {
+	font-family:'Proxima N W01 Bold';
+	font-weight: normal;
+	font-style: normal;
+}
+.proximaLight() {
+	font-family:'Proxima N W01 Light';
+	font-weight: normal;
+	font-style: normal;
+}
+.proximaReg() {
+	font-family:'Proxima Nova W08 Reg';
+	font-weight: normal;
+	font-style: normal;
+}
 
-.ciscoExtLight() {
-	font-family: 'ciscosans_extralightregular';
+.proximaSemiBold() {
+	font-family:'Proxima N W01 Smbd';
 	font-weight: normal;
 	font-style: normal;
 }
-.ciscoBold() {
-	font-family: 'ciscosansbold';
-	font-weight: normal;
+.openSansReg() {
+	font-family: 'Open Sans';
+	font-weight: 400;
 	font-style: normal;
 }
-.ciscoHeavy() {
-	font-family: 'ciscosans_heavyregular';
-	font-weight: normal;
+.openSansLight() {
+	font-family: 'Open Sans';
+	font-weight: 300;
 	font-style: normal;
 }
-.ciscoReg() {
-	font-family: 'ciscosansregular';
-	font-weight: normal;
-	font-style: normal;
-}
-.ciscoThin() {
-	font-family: 'ciscosans_thinregular';
-	font-weight: normal;
-	font-style: normal;
-}
-
 .baseFontSet() {
 	font-size: @font-size;
+	letter-spacing: 0.05em;
 	color: @color;
 	line-height: @line-height;
-	.ciscoExtLight();
+	.openSansLight();
 }
 .inheritWH(@w:inherit, @h:inherit) {
 	width: @w;

@@ -14,7 +14,7 @@ html {
 body {
 	/* set default fonts */
 	.baseFontSet();
-	background-color: #f0f0f0;
+	background-color: #fff;
 }
 h1, h2, h3, h4, h5, h6, p, menu, ol, ul {
 	margin: 0;
@@ -67,9 +67,9 @@ ol {
 	}
 }
 strong {
-	.ciscoBold();
+	
 }
-.linkSet(@color-red, @color-red-hvr, inherit, none, none);
+.linkSet(@color-option, @hover-color, inherit);
 a.no-deco {
 	text-decoration: none;	
 }
@@ -140,8 +140,16 @@ textarea, input { outline: none; }
 	position: relative;
 	&.top {
 		min-height: 100%;
+		/* equal to footer height */
+  		margin-bottom: -314px; 
+		&:after {
+			content: "";
+			display: block;
+			height: 314px;
+		}
 	}
 	&.btm {
+		height: 314px;
 		position: relative;
 		clear: both;
 	}
@@ -158,44 +166,24 @@ body.toolbar {
 	overflow: hidden;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { 
-	color: @color-red;
+	
 	text-transform: uppercase;
 	font-weight: normal;
 }
 h1, .h1 {
-	font-size: 51px;
-	line-height: 1.059em;
-	.ciscoThin();
-	padding-bottom: 25px;
-	span {
-		display: block;
-		line-height: 1.500em;
-		font-size: 14px;
-		padding-bottom: 8px;	
-	}
+	
 }
 h2, .h2 {
-	font-size: 28px;
-	line-height: 1.214em;
-	padding-bottom: 28px;
+	
 	span {
-		display: block;
-		line-height: 1.571em;
-		font-size: 14px;
+		
 	}
 }
 h3, .h3 {
-	font-size: 20px;
-	line-height: 1.500em;
-	padding-bottom: 20px;
-	color: @color;
+	
 }
 h4, .h4 {
-	.ciscoReg();
-	font-size: 12px;
-	line-height: 1.750em;
-	padding-bottom: 10px;
-	padding-top: 5px;
+	
 	&:first-child {
 		padding-top: 0;	
 	}
@@ -203,9 +191,7 @@ h4, .h4 {
 ul {
 	li {
 		strong {
-			color: @color-red;
-			text-transform: uppercase;
-			.ciscoReg();
+			
 		}
 	}
 }
