@@ -1,80 +1,115 @@
 /*top page*/
 header {
-	height: 100px;
-	padding: 10px 0 22px;
+	height: 65px;
+	padding: 15px 0 22px;
 	.logo {
-		margin-top: 6px;
+		width: 120px;
 	}
 	.main-nav {
-		.positions(absolute, auto, 0, 0);
 		.listUnstyled();
+		&.menu-show {
+			ul {
+				display: block;	
+			}
+		}
 		ul {
-			margin-top: 28px;
+			width: 100%;
+			z-index: 50;
+			.positions(absolute, 0, 65px);
+			display: none;
+			text-align: center;
 			li {
 				.li-plain();
 				padding-bottom: 0;
-				float: left;
 				.linkSet(@color-white, @color-white, inherit, none, none);
 				a {
 					display: block;
 					height: 42px;
 					.proximaSemiBold();
 					text-transform: uppercase;
-					font-size: 16px;
 					letter-spacing: 0.05em;	
 					padding: 0 10px;
 					line-height: 42px;
-					&.purple {
-						background-color: @col-purple;
+					&:link {
+						font-size: 14px;	
+					}
+					.colorset(@val, @val-hvr) {
+						background-color: @val;
 						&:hover {
-							background-color: @col-purple-hvr;
+							background-color: @val-hvr;
 						}
+					}
+					&.purple {
+						.colorset(@col-purple, @col-purple-hvr);
 					}
 					&.pink {
-						background-color: @col-pink;
-						&:hover {
-							background-color: @col-pink-hvr;
-						}
+						.colorset(@col-pink, @col-pink-hvr);
 					}
 					&.yellow {
-						background-color: @col-yellow;
-						&:hover {
-							background-color: @col-yellow-hvr;
-						}
+						.colorset(@col-yellow, @col-yellow-hvr);
 					}
 					&.green {
-						background-color: @col-green;
-						&:hover {
-							background-color: @col-green-hvr;
-						}
+						.colorset(@col-green, @col-green-hvr);
 					}
 					&.blue {
-						background-color: @col-blue;
-						&:hover {
-							background-color: @col-blue-hvr;
-						}
+						.colorset(@col-blue, @col-blue-hvr);
 					}
 					&.beige {
-						background-color: @col-beige;
-						&:hover {
-							background-color: @col-beige-hvr;
-						}
+						.colorset(@col-beige, @col-beige-hvr);
 					}
 					&.orange {
-						background-color: @col-orange;
-						&:hover {
-							background-color: @col-orange-hvr;
-						}
+						.colorset(@col-orange, @col-orange-hvr);
 					}
 				}
+			}
+		}
+		.btn-menu {
+			.positions(absolute, auto, 6px, 0);	
+			color: @color;
+			background-color: transparent;
+			border: none;
+			font-size: 40px;
+			&:hover {
+				color: @hover-color;
 			}
 		}
 	}
 }
 
 .setTopPage(@w) when (@w = @breakpoint1) {
+	header {
+		height: auto;
+		.logo {
+			width: auto;	
+		}
+		.main-nav {
+			ul {
+				width: auto;
+				display: block !important;
+				.positions(relative, auto, auto);
+				margin-top: 22px;
+				text-align: left;
+				li {
+					float:left;	
+				}
+			}
+		}
+	}
 	
 }	
 .setTopPage(@w) when (@w = @breakpoint2) {
-		
+	header {
+		.main-nav {
+			.positions(absolute, auto, 0, 0);
+		}
+	}
+}	
+.setTopPage(@w) when (@w = @breakpoint3) {
+	header {
+		.logo {
+		}
+		.main-nav {
+			
+		}
+	}
 }	

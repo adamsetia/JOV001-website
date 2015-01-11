@@ -136,24 +136,7 @@ textarea, input { outline: none; }
 	display: none;
 }
 
-.sticky {
-	position: relative;
-	&.top {
-		min-height: 100%;
-		/* equal to footer height */
-  		margin-bottom: -314px; 
-		&:after {
-			content: "";
-			display: block;
-			height: 314px;
-		}
-	}
-	&.btm {
-		height: 314px;
-		position: relative;
-		clear: both;
-	}
-}
+
 .button {
 	padding: 0;	
 }
@@ -289,9 +272,14 @@ ul {
 		}
 	}
 	
+	.stickySet(264px);
 }	
 .setGlobal(@w) when (@w = @breakpoint2) {
 	br {
 		display: inline;	
 	}
+	.stickySet(264px);
+}	
+.setGlobal(@w) when (@w = @breakpoint3) {
+	
 }	

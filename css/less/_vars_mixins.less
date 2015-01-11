@@ -1,14 +1,15 @@
 @breakpoint1 : 768px;
 @breakpoint2 : 1024px;
 @breakpoint3 : 1200px;
-@font-size : 18px;
+@font-size : 14px;
 @line-height : 1.667em;
 @color-option : #4e4d4d;
 @color: #6c6a6a;
 @color-black: #000;
 @color-white: #fff;
 @color-white-hvr : darken(@color-white, 20%);
-@hover-color : lighten(@color-option, 20%);
+@hover-color : lighten(@color-option, 30%);
+@color-bar-grey: #919090;
 /*site colors*/
 @col-purple: #c04192;
 @col-purple-hvr: darken(@col-purple, 10%);
@@ -24,6 +25,7 @@
 @col-beige-hvr: darken(@col-beige, 10%);
 @col-orange: #fe6a42;
 @col-orange-hvr: darken(@col-orange, 10%);
+
 /*
 font-family:'Proxima N W01 Bold';
 font-family:'Proxima N W01 Smbd';
@@ -45,7 +47,6 @@ font-family:'Proxima Nova W08 Reg';
 	font-weight: normal;
 	font-style: normal;
 }
-
 .proximaSemiBold() {
 	font-family:'Proxima N W01 Smbd';
 	font-weight: normal;
@@ -300,4 +301,25 @@ font-family:'Proxima Nova W08 Reg';
 		clear: both;
 	}
 	*zoom: 1;	
+}
+.stickySet(@val) {
+	.sticky {
+		@stickyFooterHeight: @val;
+		position: relative;
+		&.top {
+			min-height: 100%;
+			/* equal to footer height */
+			margin-bottom: -@val; 
+			&:after {
+				content: "";
+				display: block;
+				height: @val;
+			}
+		}
+		&.btm {
+			height: @val;
+			position: relative;
+			clear: both;
+		}
+	}
 }
