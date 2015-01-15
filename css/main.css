@@ -636,7 +636,7 @@ body {
   letter-spacing: 0.05em;
   color: #6c6a6a;
   line-height: 1.667em;
-  font-family: 'Open Sans';
+  font-family: "open-sans";
   font-weight: 300;
   font-style: normal;
   background-color: #fff;
@@ -937,13 +937,14 @@ h4:first-child,
   width: 100%;
   background-color: #919090;
   color: #fff;
-  font-family: 'Proxima N W01 Smbd';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 600;
   font-style: normal;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
   padding: 10px 0;
-  font-size: 24px;
+  font-size: 31px;
+  line-height: 1em;
 }
 .bar-header.purple {
   background-color: #c04192;
@@ -967,11 +968,12 @@ h4:first-child,
   background-color: #fe6a42;
 }
 .bar-header.txt-sml {
-  font-size: 16px;
+  font-size: 26px;
 }
 .bar-header.title-bar {
   text-align: left;
   color: #4e4d4d;
+  padding: 15px 0;
 }
 .bar-header.title-bar h1 {
   padding-bottom: 0;
@@ -987,8 +989,8 @@ h4:first-child,
   display: block;
   color: #fff;
   padding: 4px 10px;
-  font-family: 'Proxima Nova W08 Reg';
-  font-weight: normal;
+  font-family: "proxima-nova-alt";
+  font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
   font-size: 12px;
@@ -1060,8 +1062,8 @@ h4:first-child,
   *display: inline;
   float: none !important;
   text-transform: uppercase;
-  font-family: 'Proxima N W01 Smbd';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 600;
   font-style: normal;
   letter-spacing: 0.1em;
   font-size: 18px;
@@ -1195,8 +1197,8 @@ header .main-nav ul li a.no-deco {
 header .main-nav ul li a {
   display: block;
   height: 42px;
-  font-family: 'Proxima N W01 Smbd';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1302,9 +1304,10 @@ footer .footer-nav {
   text-align: center;
   padding-bottom: 20px;
   text-transform: uppercase;
-  font-family: 'Proxima Nova W08 Reg';
-  font-weight: normal;
+  font-family: "proxima-nova-condensed";
+  font-weight: 600;
   font-style: normal;
+  letter-spacing: 0.1em;
   font-size: 13px;
 }
 footer .footer-nav ul li {
@@ -1336,8 +1339,8 @@ footer .subscribe-widget input[type='text'] {
   /* Opera/IE 8+ */
   font-size: 14px;
   padding: 0 6px;
-  font-family: 'Proxima Nova W08 Reg';
-  font-weight: normal;
+  font-family: "open-sans";
+  font-weight: 400;
   font-style: normal;
 }
 footer .subscribe-widget button[type='submit'] {
@@ -1347,8 +1350,8 @@ footer .subscribe-widget button[type='submit'] {
   line-height: 38px;
   padding: 0 15px;
   text-transform: uppercase;
-  font-family: 'Proxima Nova W08 Reg';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 400;
   font-style: normal;
   font-size: 12px;
   width: 30%;
@@ -1428,8 +1431,8 @@ footer .footer-btm {
   text-align: center;
   background-color: #6c6a6a;
   color: #fff;
-  font-family: 'Proxima Nova W08 Reg';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 400;
   font-style: normal;
   height: 45px;
   font-size: 14px;
@@ -1441,11 +1444,12 @@ footer .widget {
   padding-bottom: 20px;
 }
 footer .widget h3 {
-  font-family: 'Proxima Nova W08 Reg';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 600;
   font-style: normal;
   font-size: 16px;
   padding-bottom: 5px;
+  letter-spacing: 0.1em;
 }
 /* layout start */
 /*sections*/
@@ -1467,8 +1471,8 @@ section.sec-pad {
   line-height: 1.2em;
 }
 .featured .item .info h4 {
-  font-family: 'Proxima N W01 Bold';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 700;
   font-style: normal;
   padding-bottom: 8px;
   font-size: 15px;
@@ -1495,11 +1499,12 @@ section.sec-pad {
 .main-listing .item .info h2 {
   line-height: 1.2em;
   font-size: 20px;
-  font-family: 'Proxima N W01 Light';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 300;
   font-style: normal;
   text-align: center;
   padding-bottom: 10px;
+  letter-spacing: 0.05em;
 }
 .main-listing .item a {
   position: absolute;
@@ -1531,8 +1536,8 @@ section.sec-pad {
   line-height: 1.2em;
 }
 .side-listing .item .info h4 {
-  font-family: 'Proxima N W01 Bold';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 700;
   font-style: normal;
   padding-bottom: 5px;
   font-size: 14px;
@@ -1553,8 +1558,8 @@ section.sec-pad {
   padding-bottom: 30px;
 }
 .rel-tiles h3 {
-  font-family: 'Proxima N W01 Light';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 300;
   font-style: normal;
   text-align: center;
   border-top: 1px solid #6c6a6a;
@@ -1572,8 +1577,8 @@ section.sec-pad {
   line-height: 1.2em;
 }
 .rel-tiles .item .info h4 {
-  font-family: 'Proxima Nova W08 Reg';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 400;
   font-style: normal;
   padding-bottom: 5px;
   font-size: 14px;
@@ -1595,9 +1600,9 @@ section.sec-pad {
 }
 .main-content h1 {
   line-height: 1.2em;
-  font-size: 20px;
-  font-family: 'Proxima N W01 Light';
-  font-weight: normal;
+  font-size: 23px;
+  font-family: "proxima-nova";
+  font-weight: 300;
   font-style: normal;
   padding-bottom: 20px;
 }
@@ -1623,8 +1628,8 @@ section.sec-pad {
 .main-content blockquote p {
   line-height: 1.2em;
   font-size: 18px;
-  font-family: 'Proxima N W01 Light';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 300;
   font-style: normal;
   padding-bottom: 0;
   text-align: center;
@@ -1634,8 +1639,8 @@ section.sec-pad {
 .main-content blockquote:after {
   color: #ff7285;
   content: '“';
-  font-family: 'Proxima N W01 Light';
-  font-weight: normal;
+  font-family: "proxima-nova";
+  font-weight: 300;
   font-style: normal;
   font-size: 7em;
   position: absolute;
@@ -1673,6 +1678,12 @@ section.sec-pad {
     height: 264px;
     position: relative;
     clear: both;
+  }
+  .bar-header {
+    font-size: 41px;
+  }
+  .bar-header.title-bar {
+    padding: 20px 0;
   }
   div.grid_centered,
   .grid_centered {
@@ -1775,9 +1786,6 @@ section.sec-pad {
     font-size: 28px;
   }
   footer .widget h3 {
-    font-family: 'Proxima Nova W08 Reg';
-    font-weight: normal;
-    font-style: normal;
     font-size: 20px;
   }
   footer .footer-btm {
@@ -1791,7 +1799,7 @@ section.sec-pad {
     font-size: 30px;
   }
   .main-content h1 {
-    font-size: 30px;
+    font-size: 33px;
   }
   .main-content blockquote {
     position: relative;

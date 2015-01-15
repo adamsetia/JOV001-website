@@ -33,14 +33,16 @@
 	letter-spacing: 0.05em;
     margin-bottom: 30px;
     padding: 10px 0;
-	font-size: 24px;
+	font-size: 31px;
+	line-height: 1em;
 	.col-bg();
 	&.txt-sml {
-		font-size: 16px	
+		font-size: 26px	
 	}
 	&.title-bar {
 		text-align: left;
 		color: @color-option;
+		padding: 15px 0;
 		h1 {
 			padding-bottom: 0;	
 		}
@@ -57,7 +59,7 @@
 		color: #fff;
 		padding: 4px 10px;
 		.col-bg();
-		.proximaReg();
+		.proximaAltSemiBold();
 		text-transform: uppercase;
 		font-size: 12px;
 		letter-spacing: 0.1em;
@@ -124,7 +126,12 @@
 }
 
 .setComponents(@w) when (@w = @breakpoint1) {
-	
+	.bar-header {
+		font-size: 41px;
+		&.title-bar {
+			padding: 20px 0;
+		}
+	}
 }	
 .setComponents(@w) when (@w = @breakpoint2) {
 	
