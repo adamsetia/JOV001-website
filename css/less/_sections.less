@@ -56,10 +56,10 @@ section {
 		}
 	}
 }
-.side-listing {
+.side-listing, .widget_ultimate_posts {
 	.item {
 		position: relative;
-		padding-bottom: 10px;
+		padding-bottom: 20px;
 		.img-cont, .info {
 			float: left;
 		}
@@ -144,7 +144,7 @@ section {
 			width: 50px;
 		}
 	}
-	p .first-letter {
+	p .first-letter, .entry > p:first-child:first-letter {
 		float: left;
 		font-size: 350%;
 		padding-top: 10px;
@@ -176,6 +176,43 @@ section {
 			bottom: -35px;
 			right: -30px;
 		}
+	}
+	.entry {
+		&.purple blockquote {
+			&:before, &:after {
+				color: @col-purple;
+			}
+		}
+		&.pink blockquote {
+			&:before, &:after {
+				color: @col-pink;
+			}
+		}
+		&.yellow blockquote {
+			&:before, &:after {
+				color: @col-yellow;
+			}
+		}
+		&.green blockquote {
+			&:before, &:after {
+				color: @col-green;
+			}
+		}
+		&.blue blockquote {
+			&:before, &:after {
+				color: @col-blue;
+			}
+		}
+		&.beige blockquote {
+			&:before, &:after {
+				color: @col-beige;
+			}
+		}
+		&.orange blockquote {
+			&:before, &:after {
+				color: @col-orange;
+			}
+		}		
 	}
 }
 .setSections(@w) when (@w = @breakpoint1) {

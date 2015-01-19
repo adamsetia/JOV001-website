@@ -19,6 +19,12 @@ header {
 			display: none;
 			text-align: center;
 			li {
+				.colorset(@val, @val-hvr) {
+					background-color: @val;
+					&:hover {
+						background-color: @val-hvr;
+					}
+				}
 				.li-plain();
 				padding-bottom: 0;
 				.linkSet(@color-white, @color-white, inherit, none, none);
@@ -32,12 +38,6 @@ header {
 					line-height: 42px;
 					&:link {
 						font-size: 14px;	
-					}
-					.colorset(@val, @val-hvr) {
-						background-color: @val;
-						&:hover {
-							background-color: @val-hvr;
-						}
 					}
 					&.purple {
 						.colorset(@col-purple, @col-purple-hvr);
@@ -58,6 +58,41 @@ header {
 						.colorset(@col-beige, @col-beige-hvr);
 					}
 					&.orange {
+						.colorset(@col-orange, @col-orange-hvr);
+					}
+				}
+				&.purple {
+					a {
+						.colorset(@col-purple, @col-purple-hvr);
+					}
+				}
+				&.pink {
+					a {
+						.colorset(@col-pink, @col-pink-hvr);
+					}
+				}
+				&.yellow {
+					a {
+						.colorset(@col-yellow, @col-yellow-hvr);
+					}
+				}
+				&.green {
+					a {
+						.colorset(@col-green, @col-green-hvr);
+					}
+				}
+				&.blue {
+					a {
+						.colorset(@col-blue, @col-blue-hvr);
+					}
+				}
+				&.beige {
+					a {
+						.colorset(@col-beige, @col-beige-hvr);
+					}
+				}
+				&.orange {
+					a {
 						.colorset(@col-orange, @col-orange-hvr);
 					}
 				}

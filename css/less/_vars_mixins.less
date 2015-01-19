@@ -32,35 +32,22 @@ font-family:'Proxima N W01 Smbd';
 font-family:'Proxima N W01 Light';
 font-family:'Proxima Nova W08 Reg';
 */
-.proximaBold() {
+.proximaMaster(@weight:400) {
 	font-family: "proxima-nova";
-	font-weight: 700;
+	font-weight: @weight;
 	font-style: normal;
 }
-.proximaAltBold() {
-	font-family: "proxima-nova-alt";
-	font-weight: 700;
-	font-style: normal;
+.proximaBold() {
+	.proximaMaster(700);
 }
 .proximaLight() {
-	font-family: "proxima-nova";
-	font-weight: 300;
-	font-style: normal;
+	.proximaMaster(300);
 }
 .proximaReg() {
-	font-family: "proxima-nova";
-	font-weight: 400;
-	font-style: normal;
+	.proximaMaster();
 }
 .proximaSemiBold() {
-	font-family: "proxima-nova";
-	font-weight: 600;
-	font-style: normal;
-}
-.proximaAltSemiBold() {
-	font-family: "proxima-nova-alt";
-	font-weight: 600;
-	font-style: normal;
+	.proximaMaster(600);
 }
 .proximaCondSemiBold() {
 	font-family: "proxima-nova-condensed";
@@ -181,7 +168,7 @@ font-family:'Proxima Nova W08 Reg';
 		&.no-deco {
 			text-decoration: none;
 		}
-	}	
+	}
 }
 .linkSetAlpha(@link:1, @hover:0.5) {
 	a {

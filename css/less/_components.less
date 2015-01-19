@@ -51,15 +51,17 @@
 .img-cont {
 	position: relative;
 	margin-bottom: 10px;
-	.tagger {
+	.tag-holder {
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		display: block;
+	}
+	.tagger {
+		.inline-block();
 		color: #fff;
 		padding: 4px 10px;
 		.col-bg();
-		.proximaAltSemiBold();
+		.proximaSemiBold();
 		text-transform: uppercase;
 		font-size: 12px;
 		letter-spacing: 0.1em;
@@ -97,7 +99,7 @@
 .share-widget {
 	text-align: center;
 	padding-top: 30px;
-	.btn-share {
+	.btn-share, > span {
 		.inline-block();
 		text-transform: uppercase;
 		.proximaSemiBold();
@@ -123,7 +125,23 @@
 			}
 		}
 	}
+	> span {
+		text-decoration: none;
+		color: #fff;
+		height: 36px;
+		line-height: 36px;
+		padding: 0 35px;
+		margin: 0 5px;
+		cursor: pointer;
+	}
+	.st_sharethis_custom{
+		background-color: #537bbd;
+	}
+	.st_twitter_custom{
+		background-color: #78cdf0;
+	}
 }
+
 
 .setComponents(@w) when (@w = @breakpoint1) {
 	.bar-header {

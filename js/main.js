@@ -50,7 +50,7 @@ function initOwl() {
 }
 
 function initItemHovers() {
-	var elem = wrap.find('.side-listing, .featured, .main-listing, .rel-tiles'),
+	var elem = wrap.find('.widget_ultimate_posts, .side-listing, .featured, .main-listing, .rel-tiles'),
 		elItems = elem.find('.item');
 		
 	elItems.each(function(ind) {

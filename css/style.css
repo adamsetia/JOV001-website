@@ -1,6 +1,16 @@
-@import 'font-awesome.min.css';
-@import 'hover-min.css';
-@import 'owl.carousel.css';
+@import 'css/font-awesome.min.css';
+@import 'css/hover-min.css';
+@import 'css/owl.carousel.css';
+/*   
+Theme Name:		JOOV Custom Theme
+Theme URI: 		http://joov.com.au
+Description: 	JOOV is a responsive custom theme.
+Author: 		Adam Tengku
+Author URI: 	http://adamsetia.com
+Version: 		1.0.0
+License:     	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+*/
 /*@import '_fonts.less';*/
 /*! normalize.css v1.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -982,14 +992,22 @@ h4:first-child,
   position: relative;
   margin-bottom: 10px;
 }
-.img-cont .tagger {
+.img-cont .tag-holder {
   position: absolute;
   left: 0;
   bottom: 0;
-  display: block;
+}
+.img-cont .tagger {
+  /* For IE 7 */
+  display: inline-block;
+  vertical-align: top;
+  /* For IE 7 */
+  zoom: 1;
+  *display: inline;
+  float: none !important;
   color: #fff;
   padding: 4px 10px;
-  font-family: "proxima-nova-alt";
+  font-family: "proxima-nova";
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
@@ -1053,7 +1071,8 @@ h4:first-child,
   text-align: center;
   padding-top: 30px;
 }
-.share-widget .btn-share {
+.share-widget .btn-share,
+.share-widget > span {
   /* For IE 7 */
   display: inline-block;
   vertical-align: top;
@@ -1069,7 +1088,8 @@ h4:first-child,
   font-size: 18px;
   padding: 0 5px;
 }
-.share-widget .btn-share a {
+.share-widget .btn-share a,
+.share-widget > span a {
   display: block;
   text-decoration: none;
   color: #fff;
@@ -1077,10 +1097,27 @@ h4:first-child,
   line-height: 36px;
   padding: 0 35px;
 }
-.share-widget .btn-share.share a {
+.share-widget .btn-share.share a,
+.share-widget > span.share a {
   background-color: #537bbd;
 }
-.share-widget .btn-share.tweet a {
+.share-widget .btn-share.tweet a,
+.share-widget > span.tweet a {
+  background-color: #78cdf0;
+}
+.share-widget > span {
+  text-decoration: none;
+  color: #fff;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 35px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.share-widget .st_sharethis_custom {
+  background-color: #537bbd;
+}
+.share-widget .st_twitter_custom {
   background-color: #78cdf0;
 }
 /* tables */
@@ -1248,6 +1285,48 @@ header .main-nav ul li a.orange {
   background-color: #fe6a42;
 }
 header .main-nav ul li a.orange:hover {
+  background-color: #fe420f;
+}
+header .main-nav ul li.purple a {
+  background-color: #c04192;
+}
+header .main-nav ul li.purple a:hover {
+  background-color: #9b3375;
+}
+header .main-nav ul li.pink a {
+  background-color: #ff7285;
+}
+header .main-nav ul li.pink a:hover {
+  background-color: #ff3f59;
+}
+header .main-nav ul li.yellow a {
+  background-color: #f9c533;
+}
+header .main-nav ul li.yellow a:hover {
+  background-color: #f2b407;
+}
+header .main-nav ul li.green a {
+  background-color: #b6dba5;
+}
+header .main-nav ul li.green a:hover {
+  background-color: #98cc81;
+}
+header .main-nav ul li.blue a {
+  background-color: #9ecddd;
+}
+header .main-nav ul li.blue a:hover {
+  background-color: #78bad0;
+}
+header .main-nav ul li.beige a {
+  background-color: #e1d1ad;
+}
+header .main-nav ul li.beige a:hover {
+  background-color: #d3bc88;
+}
+header .main-nav ul li.orange a {
+  background-color: #fe6a42;
+}
+header .main-nav ul li.orange a:hover {
   background-color: #fe420f;
 }
 header .main-nav .btn-menu {
@@ -1518,31 +1597,38 @@ section.sec-pad {
 .main-listing .item a span {
   display: none;
 }
-.side-listing .item {
+.side-listing .item,
+.widget_ultimate_posts .item {
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 .side-listing .item .img-cont,
-.side-listing .item .info {
+.widget_ultimate_posts .item .img-cont,
+.side-listing .item .info,
+.widget_ultimate_posts .item .info {
   float: left;
 }
-.side-listing .item .img-cont {
+.side-listing .item .img-cont,
+.widget_ultimate_posts .item .img-cont {
   width: 40%;
   padding-right: 5%;
   margin: 0;
 }
-.side-listing .item .info {
+.side-listing .item .info,
+.widget_ultimate_posts .item .info {
   width: 55%;
   line-height: 1.2em;
 }
-.side-listing .item .info h4 {
+.side-listing .item .info h4,
+.widget_ultimate_posts .item .info h4 {
   font-family: "proxima-nova";
   font-weight: 700;
   font-style: normal;
   padding-bottom: 5px;
   font-size: 14px;
 }
-.side-listing .item a {
+.side-listing .item a,
+.widget_ultimate_posts .item a {
   position: absolute;
   left: 0;
   top: 0;
@@ -1551,10 +1637,12 @@ section.sec-pad {
   width: 100%;
   height: 100%;
 }
-.side-listing .item a span {
+.side-listing .item a span,
+.widget_ultimate_posts .item a span {
   display: none;
 }
-.side-listing.widget {
+.side-listing.widget,
+.widget_ultimate_posts.widget {
   padding-bottom: 30px;
 }
 .rel-tiles h3 {
@@ -1616,7 +1704,8 @@ section.sec-pad {
   height: auto;
   width: 50px;
 }
-.main-content p .first-letter {
+.main-content p .first-letter,
+.main-content .entry > p:first-child:first-letter {
   float: left;
   font-size: 350%;
   padding-top: 10px;
@@ -1653,6 +1742,34 @@ section.sec-pad {
   top: auto;
   bottom: -35px;
   right: -30px;
+}
+.main-content .entry.purple blockquote:before,
+.main-content .entry.purple blockquote:after {
+  color: #c04192;
+}
+.main-content .entry.pink blockquote:before,
+.main-content .entry.pink blockquote:after {
+  color: #ff7285;
+}
+.main-content .entry.yellow blockquote:before,
+.main-content .entry.yellow blockquote:after {
+  color: #f9c533;
+}
+.main-content .entry.green blockquote:before,
+.main-content .entry.green blockquote:after {
+  color: #b6dba5;
+}
+.main-content .entry.blue blockquote:before,
+.main-content .entry.blue blockquote:after {
+  color: #9ecddd;
+}
+.main-content .entry.beige blockquote:before,
+.main-content .entry.beige blockquote:after {
+  color: #e1d1ad;
+}
+.main-content .entry.orange blockquote:before,
+.main-content .entry.orange blockquote:after {
+  color: #fe6a42;
 }
 @media only screen and (min-width: 768px) {
   .mobile.show {
