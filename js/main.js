@@ -27,7 +27,23 @@ function initMenu() {
 
 // owl carousel
 function initOwl() {
-	wrap.find('.owl-carousel').owlCarousel({
+	wrap.find('.top-story .owl-carousel').owlCarousel({
+		margin:0,
+		nav:true,
+		dots: true,
+		navText:['<div class="bg-white"></div><span class="fa fa-chevron-left"></span>', '<div class="bg-white"></div><span class="fa fa-chevron-right"></span>'],
+		items:1,
+		loop: true,
+		responsive:{
+			0:{
+				nav:false
+			},
+			768:{
+				nav:true
+			}
+		}
+	})
+	wrap.find('.featured .owl-carousel').owlCarousel({
 		loop:false,
 		margin:5,
 		nav:false,
@@ -50,7 +66,7 @@ function initOwl() {
 }
 
 function initItemHovers() {
-	var elem = wrap.find('.widget_ultimate_posts, .side-listing, .featured, .main-listing, .rel-tiles'),
+	var elem = wrap.find('.widget_ultimate_posts, .side-listing, .featured, .main-listing, .rel-tiles, .top-story'),
 		elItems = elem.find('.item');
 		
 	elItems.each(function(ind) {

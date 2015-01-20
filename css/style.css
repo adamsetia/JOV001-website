@@ -998,6 +998,12 @@ h4:first-child,
   bottom: 0;
 }
 .img-cont .tagger {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
   /* For IE 7 */
   display: inline-block;
   vertical-align: top;
@@ -1066,6 +1072,44 @@ h4:first-child,
 }
 .owl-carousel .owl-dots .owl-dot.active span {
   background: #9b9999;
+}
+.owl-carousel .owl-controls .owl-prev,
+.owl-carousel .owl-controls .owl-next {
+  color: #4e4d4d;
+  display: block;
+  font-size: 15px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: -20px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 40px;
+}
+.owl-carousel .owl-controls .owl-prev:hover,
+.owl-carousel .owl-controls .owl-next:hover {
+  color: #6c6a6a;
+}
+.owl-carousel .owl-controls .owl-prev {
+  left: 0;
+}
+.owl-carousel .owl-controls .owl-next {
+  right: 0;
+}
+.owl-carousel .owl-controls .bg-white {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  background-color: #ffffff;
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
 }
 .share-widget {
   text-align: center;
@@ -1535,6 +1579,33 @@ footer .widget h3 {
 section.sec-pad {
   padding: 0 0 30px;
 }
+.top-story .item {
+  position: relative;
+}
+.top-story .item h1 {
+  font-size: 20px;
+}
+.top-story .item .tag-holder {
+  position: relative;
+  text-align: center;
+}
+.top-story .item .img-cont .tagger {
+  line-height: 1;
+  width: 100%;
+  padding: 20px;
+}
+.top-story .item a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+}
+.top-story .item a span {
+  display: none;
+}
 .featured .item {
   position: relative;
 }
@@ -1912,6 +1983,14 @@ section.sec-pad {
     right: auto;
     bottom: 0;
   }
+  .top-story .item .tag-holder {
+    padding-right: 10%;
+    position: absolute;
+    text-align: left;
+  }
+  .top-story .item h1 {
+    font-size: 30px;
+  }
   .main-listing .item .info h2 {
     font-size: 30px;
   }
@@ -2003,6 +2082,9 @@ section.sec-pad {
     width: 78px;
     height: 78px;
     line-height: 78px;
+    font-size: 40px;
+  }
+  .top-story .item h1 {
     font-size: 40px;
   }
   .rel-tiles .item {
