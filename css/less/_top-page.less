@@ -3,7 +3,17 @@ header {
 	height: 65px;
 	padding: 15px 0 22px;
 	.logo {
-		width: 120px;
+		display: inline-block;
+		line-height: 1em;
+		margin-top: -5px;
+		padding-left: 10px;
+		a {
+			.proximaBlack();	
+			text-decoration: none;
+			color: #ff4306;
+			font-size: 55px;
+			line-height: 1em;
+		}
 	}
 	.main-nav {
 		.listUnstyled();
@@ -115,7 +125,9 @@ header {
 	header {
 		height: auto;
 		.logo {
-			width: auto;	
+			a {
+				font-size: 86px;	
+			}
 		}
 		.main-nav {
 			ul {

@@ -34,12 +34,14 @@
     margin-bottom: 30px;
     padding: 10px 0;
 	font-size: 31px;
-	line-height: 1em;
 	.col-bg();
+	line-height: 1em;
 	&.txt-sml {
 		font-size: 26px	
 	}
 	&.title-bar {
+		line-height: 1em;
+		height: auto;
 		text-align: left;
 		color: @color-option;
 		padding: 15px 0;
@@ -178,6 +180,8 @@
 .setComponents(@w) when (@w = @breakpoint1) {
 	.bar-header {
 		font-size: 41px;
+		height: 50px;
+		line-height: 50px;
 		&.title-bar {
 			padding: 20px 0;
 		}

@@ -37,9 +37,12 @@ footer {
 			}
 		}
 	}
-	.subscribe-widget {
+	.subscribe-widget, .s2_form_widget {
 		input, button {
 			float: left;	
+		}
+		label, p br {
+			display: none;	
 		}
 		input[type='text'] {
 			height: 38px;
@@ -50,7 +53,8 @@ footer {
 			padding: 0 6px;	
 			.openSansReg() ;
 		}
-		button[type='submit'] {
+		button[type='submit'], input[type='submit'] {
+			border: none;
 			height:38px;
 			background-color: @color;
 			color: #fff;
@@ -63,6 +67,12 @@ footer {
 			&:hover {
 				background-color: @hover-color;
 			}
+		}
+		.s2_error {
+			  clear: both;
+			  font-size: 12px;
+			  padding-top: 10px;
+			  color: red;	
 		}
 	}
 	.social-share {
@@ -127,7 +137,7 @@ footer {
 	}
 	.widget {
 		padding-bottom: 20px;
-		h3 {
+		h2, h3 {
 			.proximaSemiBold();
 			font-size: 16px;
 			padding-bottom: 5px;
@@ -141,7 +151,7 @@ footer {
 		.footer-nav {
 			display: block;	
 		}
-		.subscribe-widget {
+		.subscribe-widget, .s2_form_widget {
 			float: left;
 			width: 40%;
 		}
@@ -160,8 +170,12 @@ footer {
 			}
 		}
 		.widget {
-			h3 {
+			h2, h3 {
 				font-size: 20px;
+			}
+			&.widget_text {
+				float: right;
+    			text-align: right;
 			}
 		}
 		.footer-btm {

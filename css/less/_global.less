@@ -15,6 +15,7 @@ body {
 	/* set default fonts */
 	.baseFontSet();
 	background-color: #fff;
+	font-size: 17px;
 }
 h1, h2, h3, h4, h5, h6, p, menu, ol, ul {
 	margin: 0;
@@ -88,7 +89,7 @@ br {
 input,
 select,
 textarea,
-button {
+button, a {
 	-webkit-appearance: none;
     border-radius: 0;
 	outline: none;
@@ -273,6 +274,11 @@ ul {
 	}
 	
 	.stickySet(264px);
+	body {
+	/* set default fonts */
+		font-size: 17px;	
+	}
+
 }	
 .setGlobal(@w) when (@w = @breakpoint2) {
 	br {
